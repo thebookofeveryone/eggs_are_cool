@@ -18,7 +18,8 @@ defmodule EggsAreCoolWeb.Router do
 
     get "/", PageController, :index
 
-    get "/blog" BlogController, :blog
+    # trying to add anothing endpoint
+    # get "/blog" BlogController, :blog
   end
 
   # Other scopes may use custom stacks.
