@@ -1,0 +1,13 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
+  <p>A productive web framework that<br/>does not compromise speed and maintainability.</p>
+</section>
+
+<%= for %{title: title, body: body} <- @posts do %>
+  <h1><%= title %></h1>
+  <p><%= body %></p>
+<% end %>
+
+<%= Enum.map(@posts, fn post -> %>
+  <h1><%= post.title %></h1>
+<% end )%>
