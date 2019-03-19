@@ -14,4 +14,12 @@ defmodule EggsAreCoolWeb.PageController do
 
     render(conn, "index.html", posts: posts)
   end
+
+  def blog(conn, _params) do
+    Post
+    |> EggsAreCool.Repo.all()
+    |> IO.inspect
+
+    render(conn, "blog.html", posts: posts)
+  end
 end
