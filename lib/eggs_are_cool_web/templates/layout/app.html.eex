@@ -16,8 +16,8 @@
             <li><a href="https://www.eggs.ca/">Read More</a></li>
           </ul>
         </nav>
-        <a href="http://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
+        <a href="https://www.eggs.ca/" class="phx-logo">
+          <img src="<%= Routes.static_path(@conn, "/images/egg.png") %>" alt="Phoenix Framework Logo"/>
         </a>
       </section>
     </header>
