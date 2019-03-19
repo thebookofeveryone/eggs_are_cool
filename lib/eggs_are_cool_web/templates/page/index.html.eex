@@ -1,9 +1,13 @@
 <section class="phx-hero">
   <h1><%= gettext "Welcome to %{name}!", name: "Eggs Are Cool" %></h1>
+  <span><img src="<%= Routes.static_path(@conn, "/images/hero.png") %>" alt="Gudetama Hero"/></span>
   <p>A versatile breakfast framework that<br/>does not compromise nutrition and delectability.</p>
 </section>
 
-<%= for %{title: title, body: body} <- @posts do %>
-  <h1><%= title %></h1>
-  <p><%= body %></p>
+<%= for post <- @posts do %>
+  <h1><%= post.title %></h1>
+  <p><%= post.body %></p>
 <% end %>
+
+<%# pattern matching %>
+<%# %{title: title, body: body} %>
