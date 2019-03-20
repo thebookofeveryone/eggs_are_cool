@@ -18,7 +18,7 @@
           </ul>
         </nav>
         <a href="https://www.eggs.ca/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/egg.png") %>" alt="Phoenix Framework Logo"/>
+          <img src="<%= Routes.static_path(@conn, "/images/egg-logo.png") %>" alt="Phoenix Framework Logo"/>
         </a>
       </section>
     </header>
