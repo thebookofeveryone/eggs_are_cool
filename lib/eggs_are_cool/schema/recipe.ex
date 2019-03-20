@@ -5,5 +5,6 @@ defmodule EggsAreCool.Schema.Recipe do
     field :name, :string
     field :description, :string
     field :difficulty, :integer
+    timestamps()
   end
 end
