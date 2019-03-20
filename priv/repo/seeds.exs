@@ -54,3 +54,11 @@ EggsAreCool.Repo.insert!(%EggsAreCool.Schema.Recipe{
   description: "A poached egg is an egg that has been cooked, outside the shell, by poaching, as opposed to simmering or boiling liquid. This method of preparation is favored for eggs, as it can yield more delicately cooked eggs than cooking at higher temperatures such as with boiling water.",
   difficulty: 8
 })
+
+EggsAreCool.Repo.insert!(%EggsAreCool.Schema.Recipe{
+  name: "Egg Pancakes",
+  description: "Also known as a stack of sunny side ups, or a over easies, if that's your thing. Pair it with some delectable strips of turkey bacon and a generous drizzle of maple syrup.",
+  difficulty: 9000
+})
+
+
