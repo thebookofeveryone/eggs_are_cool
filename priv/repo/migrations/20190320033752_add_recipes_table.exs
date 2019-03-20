@@ -8,5 +8,6 @@ defmodule EggsAreCool.Repo.Migrations.AddRecipesTable do
       add :difficulty,  :integer
 
       timestamps()
+    end
   end
 end
