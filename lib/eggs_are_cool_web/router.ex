@@ -18,8 +18,9 @@ defmodule EggsAreCoolWeb.Router do
 
     get "/", PageController, :index
 
-    # trying to add more endpoints
+    # change to blog controller
     get "/blog", PageController, :blog
+    # get "/blog/id", BlogController, :blog_id
 
     get "/recipes", PageController, :recipes
   end
