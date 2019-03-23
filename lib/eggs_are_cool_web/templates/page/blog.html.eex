@@ -1,6 +1,4 @@
 <section>
-  <h1>Blog works!</h1>
-
 <%= for post <- @posts do %>
   <h1><%= post.title %></h1>
   <p><%= post.body %></p>

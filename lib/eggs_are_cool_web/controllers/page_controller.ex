@@ -4,6 +4,7 @@ defmodule EggsAreCoolWeb.PageController do
 
   alias EggsAreCool.Repo
   alias EggsAreCool.Schema.Post
+  alias EggsAreCool.Schema.Recipe
 
   def index(conn, _params) do
     # posts =
@@ -29,9 +30,6 @@ defmodule EggsAreCoolWeb.PageController do
     posts =
       query
       |> Repo.all()
-
-      # try logging what we get back from the repo
-      # do we need to give IO.inspect an argument? (piped from the Repo.all return value?)
       |> Enum.map(fn post ->
         IO.inspect(Map.take(post, [:title, :body, :inserted_at]))
       end)
@@ -40,11 +38,15 @@ defmodule EggsAreCoolWeb.PageController do
   end
 
   # Recipes Route
-  # def recipes(conn, _params) do
-  # Recipe
-  # |> EggsAreCool.Repo.all()
-  # |> Enum.map (fn recipe -> 
-  # IO.inspect(Map.take(recipe, [:name, :description, :difficulty]))
-  # end)
-  # end
+  def recipes(conn, _params) do
+    recipes =
+      Recipe
+        |> Repo.all()
+        |> Enum.map (fn recipe -> 
+        IO.inspect(Map.take(recipe, [:name, :description, :difficulty]))
+        end)
+
+    render(conn, "recipes.html", recipes: recipes)
+  end
+
 end
