@@ -13,11 +13,11 @@
         <nav role="navigation">
           <ul>
             <li><a href="https://en.wikipedia.org/wiki/Egg_as_food">About</a></li>
-            <li><a href="https://www.eggs.ca/">Recipes</a></li>
-            <li><a href="https://www.eggs.ca/">Blog</a></li>
+            <li><a href="<%= Routes.page_path(@conn, :recipes) %>">Recipes</a></li>
+            <li><a href="<%= Routes.page_path(@conn, :blog) %>">Blog</a></li>
           </ul>
         </nav>
-        <a href="https://www.eggs.ca/" class="phx-logo">
+        <a href="/" class="phx-logo">
           <img src="<%= Routes.static_path(@conn, "/images/egg-logo.png") %>" alt="Phoenix Framework Logo"/>
         </a>
       </section>

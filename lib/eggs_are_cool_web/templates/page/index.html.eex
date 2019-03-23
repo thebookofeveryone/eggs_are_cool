@@ -4,10 +4,5 @@
   <p>A versatile breakfast framework that<br/>does not compromise nutrition and delectability.</p>
 </section>
 
-<%= for post <- @posts do %>
-  <h1><%= post.title %></h1>
-  <p><%= post.body %></p>
-<% end %>
-
 <%# pattern matching %>
 <%# %{title: title, body: body} %>
