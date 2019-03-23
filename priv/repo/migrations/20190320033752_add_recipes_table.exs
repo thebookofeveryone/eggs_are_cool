@@ -3,9 +3,9 @@ defmodule EggsAreCool.Repo.Migrations.AddRecipesTable do
 
   def change do
     create table(:recipes) do
-      add :name,        :string, size: 50
+      add :name, :string, size: 50
       add :description, :text
-      add :difficulty,  :integer
+      add :difficulty, :integer
 
       timestamps()
     end
