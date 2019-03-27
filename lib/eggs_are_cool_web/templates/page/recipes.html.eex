@@ -1,7 +1,0 @@
-<section>
-<%= for recipe <- @recipes do %>
-  <h1><%= recipe.name %></h1>
-  <h3>Difficulty: <%= recipe.difficulty %></h3>
-  <p><%= recipe.description %></p>
-<% end %>
-</section>

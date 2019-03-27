@@ -20,17 +20,4 @@ defmodule EggsAreCoolWeb.PageController do
 
     render(conn, "index.html", posts: [])
   end
-
-  # Recipes Route
-  def recipes(conn, _params) do
-    recipes =
-      Recipe
-        |> Repo.all()
-        |> Enum.map (fn recipe -> 
-        IO.inspect(Map.take(recipe, [:name, :description, :difficulty]))
-        end)
-
-    render(conn, "recipes.html", recipes: recipes)
-  end
-
 end

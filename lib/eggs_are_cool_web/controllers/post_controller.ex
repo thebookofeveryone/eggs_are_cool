@@ -11,6 +11,8 @@ defmodule EggsAreCoolWeb.PostController do
     query =
       Post
       |> order_by(desc: :inserted_at)
+    
+    # is there a way to query limit the characters in post.body in the query?
 
     posts =
       query
