@@ -5,7 +5,7 @@
       <div class="post-card" style="margin: 8vh 0vw">      
         <a href="<%= Routes.post_path(@conn, :show, post.id) %>">
           <h1><%= post.title %></h1>
-          <p><%= post.body %></p>
+          <p><%= String.slice(post.body, 0, 150) %>...</p>
         </a>
       </div>
       </li>

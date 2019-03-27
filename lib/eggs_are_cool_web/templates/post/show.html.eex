@@ -1,10 +1,10 @@
 <div class="post-container">
-  <h1><%=@post.title%></h1>
+  <h1>🍳 <%=@post.title%> 🍳</h1>
   <p><%= @post.inserted_at %></p>
   <p><%= @post.body %></p>
 </div>
 
 <div class="comment-container">
   <h2>Comments</h2>
-  <em>There doesn't seem to be anything here...</em>
+  <em>There doesn't seem to be anything here... </em>🐣
 <div class="comment-container">
