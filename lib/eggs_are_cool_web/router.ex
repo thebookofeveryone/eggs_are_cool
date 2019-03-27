@@ -18,7 +18,7 @@ defmodule EggsAreCoolWeb.Router do
 
     get "/", PageController, :index
     
-    resources "/recipes", RecipeController
+    resources "/recipes", RecipeController, only: [:index, :show, :new, :edit, :delete]
 
     resources "/posts", PostController, only: [:index, :show]
 

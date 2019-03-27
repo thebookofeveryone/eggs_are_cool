@@ -26,7 +26,7 @@ defmodule EggsAreCoolWeb.PostController do
 
   # Show Post by ID
   def show(conn, %{"id" => id}) do
-    post = Repo.get(Post, id)
+    post = Repo.get!(Post, id)
 
     render(conn, "show.html", post: post)
   end

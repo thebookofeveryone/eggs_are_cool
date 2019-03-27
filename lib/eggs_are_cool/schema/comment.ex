@@ -5,6 +5,9 @@ defmodule EggsAreCool.Schema.Comment do
     field :author, :string
     field :body, :string
     belongs_to :post, Post
+    # EggsAreCool.Schema.Post? full name? or auto-aliased?
+    #foreign_key: :post_id
+
     timestamps()
   end
 end
