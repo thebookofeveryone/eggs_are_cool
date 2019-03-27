@@ -22,20 +22,20 @@ defmodule EggsAreCoolWeb.PageController do
   end
 
   # Blog Route
-  def blog(conn, _params) do
-    query =
-      Post
-      |> order_by(desc: :inserted_at)
+  # def blog(conn, _params) do
+  #   query =
+  #     Post
+  #     |> order_by(desc: :inserted_at)
 
-    posts =
-      query
-      |> Repo.all()
-      |> Enum.map(fn post ->
-        IO.inspect(Map.take(post, [:title, :body, :inserted_at]))
-      end)
+  #   posts =
+  #     query
+  #     |> Repo.all()
+  #     |> Enum.map(fn post ->
+  #       IO.inspect(Map.take(post, [:title, :body, :inserted_at]))
+  #     end)
 
-    render(conn, "blog.html", posts: posts)
-  end
+  #   render(conn, "blog.html", posts: posts)
+  # end
 
   # Recipes Route
   def recipes(conn, _params) do

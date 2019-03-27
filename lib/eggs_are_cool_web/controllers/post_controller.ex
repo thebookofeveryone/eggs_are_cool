@@ -1,4 +1,4 @@
-defmodule EggsAreCoolWeb.BlogController do
+defmodule EggsAreCoolWeb.PostController do
   use EggsAreCoolWeb, :controller
 
   import Ecto.Query
@@ -6,8 +6,8 @@ defmodule EggsAreCoolWeb.BlogController do
   alias EggsAreCool.Repo
   alias EggsAreCool.Schema.Post
 
-  # Blog Route
-  def blog(conn, _params) do
+  # Get all Posts
+  def index(conn, _params) do
     query =
       Post
       |> order_by(desc: :inserted_at)
@@ -22,6 +22,16 @@ defmodule EggsAreCoolWeb.BlogController do
         IO.inspect(Map.take(post, [:title, :body, :inserted_at]))
       end)
 
-    render(conn, "blog.html", posts: posts)
+    render(conn, "posts.html", posts: posts)
   end
+
+  # Show Post by ID
+  # def show(conn, id) do
+  #   post = Repo.get(Post, id)
+
+  #   render(conn, "post.html",)
+  # end
+
+
+
 end
