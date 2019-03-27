@@ -19,10 +19,28 @@ defmodule EggsAreCoolWeb.CommentController do
 
   # # Create a Comment for a Post
   # def create(conn, _params) do
+    # extrapolate author, body from form... how to handle POST from client-facing server?
+    # post id should be passed through params?
+    # use Ecto to interface with DB, create new post
+    # return tuple with :ok / :error status
   # end
 
   # # Delete a Comment on a Post
   # def delete(conn, %{"id" => id}) do
+  # end
+
+  # Recipes for reference:
+  # Delete Recipe by ID
+  # when to use ! error-raising version vs without !
+  # def delete(conn, %{"id" => id}) do
+  #   recipe = Repo.get!(Recipe, id)
+
+  # # I don't understand the purpose of case here
+  #   case Repo.delete recipe do
+  # # are these return values conditional? how do I handle these tuples?
+  #     {:ok, struct}
+  #     {:error, changeset}
+  #   end
   # end
 
 end

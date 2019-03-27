@@ -25,7 +25,7 @@ defmodule EggsAreCoolWeb.RecipeController do
     render(conn, "show.html", recipe: recipe)
   end
 
-  # Delete Recipt by ID
+  # Delete Recipe by ID
   # when to use ! error-raising version vs without !
   # def delete(conn, %{"id" => id}) do
   #   recipe = Repo.get!(Recipe, id)
