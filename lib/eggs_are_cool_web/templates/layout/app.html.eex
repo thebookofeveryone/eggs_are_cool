@@ -13,7 +13,7 @@
         <nav role="navigation">
           <ul>
             <li><a href="https://en.wikipedia.org/wiki/Egg_as_food">About</a></li>
-            <li><a href="<%= Routes.page_path(@conn, :recipes) %>">Recipes</a></li>
+            <li><a href="<%= Routes.recipe_path(@conn, :index) %>">Recipes</a></li>
             <li><a href="<%= Routes.post_path(@conn, :index) %>">Blog</a></li>
           </ul>
         </nav>

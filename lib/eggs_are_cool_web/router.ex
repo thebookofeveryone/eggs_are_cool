@@ -17,7 +17,8 @@ defmodule EggsAreCoolWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/recipes", PageController, :recipes
+    
+    resources "/recipes", RecipeController
 
     resources "/posts", PostController, only: [:index, :show]
 
