@@ -21,6 +21,8 @@ defmodule EggsAreCoolWeb.Router do
     resources "/recipes", RecipeController, only: [:index, :show, :new, :edit, :delete]
 
     resources "/posts", PostController, only: [:index, :show]
+    # these are comments on each post. should they be in their own controller? Is this considered a nested resource?
+    resources "/comments", CommentController, only: [:index, :create, :delete]
 
   end
 
