@@ -27,15 +27,15 @@ defmodule EggsAreCoolWeb.RecipeController do
 
   # Delete Recipt by ID
   # when to use ! error-raising version vs without !
-  def delete(conn, %{"id" => id}) do
-    recipe = Repo.get!(Recipe, id)
+  # def delete(conn, %{"id" => id}) do
+  #   recipe = Repo.get!(Recipe, id)
 
-  # I don't understand the purpose of case here
-    case Repo.delete recipe do
-  # are these return values conditional? how do I handle these tuples?
-      {:ok, struct}
-      {:error, changeset}
-    end
-  end
+  # # I don't understand the purpose of case here
+  #   case Repo.delete recipe do
+  # # are these return values conditional? how do I handle these tuples?
+  #     {:ok, struct}
+  #     {:error, changeset}
+  #   end
+  # end
 
 end
