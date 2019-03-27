@@ -22,7 +22,7 @@ defmodule EggsAreCoolWeb.PostController do
         IO.inspect(Map.take(post, [:title, :body, :inserted_at]))
       end)
 
-    render(conn, "posts.html", posts: posts)
+    render(conn, "index.html", posts: posts)
   end
 
   # Show Post by ID
