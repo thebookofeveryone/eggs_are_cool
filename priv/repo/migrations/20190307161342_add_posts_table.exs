@@ -6,6 +6,7 @@ defmodule EggsAreCool.Repo.Migrations.AddPostsTable do
     create table(:posts) do
       add :title, :string, size: 50
       add :body, :text
+      # how to add has_may association? 
 
       timestamps()
     end
