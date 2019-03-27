@@ -17,10 +17,10 @@ defmodule EggsAreCoolWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-
-    resources "/posts", PostController, only: [:index,]
-
     get "/recipes", PageController, :recipes
+
+    resources "/posts", PostController, only: [:index, :show]
+
   end
 
   # Other scopes may use custom stacks.

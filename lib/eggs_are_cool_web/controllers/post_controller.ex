@@ -15,23 +15,18 @@ defmodule EggsAreCoolWeb.PostController do
     posts =
       query
       |> Repo.all()
-
-      # try logging what we get back from the repo
-      # do we need to give IO.inspect an argument? (piped from the Repo.all return value?)
       |> Enum.map(fn post ->
-        IO.inspect(Map.take(post, [:title, :body, :inserted_at]))
+        IO.inspect(Map.take(post, [:title, :body, :id, :inserted_at]))
       end)
 
     render(conn, "index.html", posts: posts)
   end
 
   # Show Post by ID
-  # def show(conn, id) do
-  #   post = Repo.get(Post, id)
+  def show(conn, %{"id" => id}) do
+    post = Repo.get(Post, id)
 
-  #   render(conn, "post.html",)
-  # end
-
-
+    render(conn, "show.html", post: post)
+  end
 
 end

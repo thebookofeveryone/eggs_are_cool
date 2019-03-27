@@ -1,6 +1,12 @@
 <section>
-<%= for post <- @posts do %>
-  <h1><%= post.title %></h1>
-  <p><%= post.body %></p>
-<% end %>
+  <ul>
+    <%= for post <- @posts do %>
+      <li>
+        <a href="<%= Routes.post_path(@conn, :show, 15) %>">
+          <h1><%= post.title %></h1>
+          <p><%= post.body %></p>
+        </a>
+      </li>
+    <% end %>
+  </ul>
 </section>
