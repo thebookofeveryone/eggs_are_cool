@@ -1,3 +1,10 @@
-<h1>Show post works!</h1>
+<div class="post-container">
+  <h1><%=@post.title%></h1>
+  <p><%= @post.inserted_at %></p>
+  <p><%= @post.body %></p>
+</div>
 
-<p><%= inspect @post %></p>
+<div class="comment-container">
+  <h2>Comments</h2>
+  <em>There doesn't seem to be anything here...</em>
+<div class="comment-container">

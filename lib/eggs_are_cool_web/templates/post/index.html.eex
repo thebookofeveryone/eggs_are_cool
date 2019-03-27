@@ -1,12 +1,14 @@
-<section>
-  <ul>
+<div>
+  <ul style="list-style: none">
     <%= for post <- @posts do %>
       <li>
-        <a href="<%= Routes.post_path(@conn, :show, 15) %>">
+      <div class="post-card" style="margin: 8vh 0vw">      
+        <a href="<%= Routes.post_path(@conn, :show, post.id) %>">
           <h1><%= post.title %></h1>
           <p><%= post.body %></p>
         </a>
+      </div>
       </li>
     <% end %>
   </ul>
-</section>
+</div>
